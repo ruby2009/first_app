@@ -1,7 +1,14 @@
 require 'sinatra'
+require 'sqlite3'
+require 'active_record'
 require_relative 'hairy'
 require_relative 'bacon'
 require_relative 'bobross'
+
+ActiveRecord::Base.establish_connection(
+  adapter: "sqlite3",
+  database: "lipsums.sqlite3"
+)
 
 get '/' do
   'Welcome to Earth, third rock from the sun!'

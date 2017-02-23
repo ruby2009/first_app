@@ -5,4 +5,5 @@ source 'https://rubygems.org' do
   gem 'faker'
   gem 'sqlite3'
   gem 'rake'
+  gem 'activerecord'
 end
